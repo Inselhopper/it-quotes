@@ -15,8 +15,7 @@ function App({ quotes }) {
                             </div>
                         </div>
                         <div className="extra">
-                            Rating:
-                            <div className="ui star rating" data-rating={Math.round(entry.rating)}></div>
+                            Rating: <div className="ui star rating" data-rating={entry.rating?Math.round(entry.rating):""}></div>
                         </div>
                     </div>
                 )
