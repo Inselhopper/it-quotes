@@ -1,17 +1,21 @@
+// React
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+// Semeantic
+import "./css/semantic.min.css";
+
+// Components
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+
+// Data
+//import { names } from "./data";
+import { quotes } from "./data/quotes";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App quotes={quotes}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

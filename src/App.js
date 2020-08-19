@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App({ quotes }) {
+
+    return (
+        <div className="ui container">
+            <div className="ui cards">
+                {quotes.map((entry) =>
+                    <div key={entry.id} className="ui card">
+                        <div className="content">
+                            <div className="header">{entry.en}</div>
+                            <div className="description">
+                                <p>{entry.author}</p>
+                            </div>
+                        </div>
+                        <div className="extra">
+                            Rating:
+                            <div className="ui star rating" data-rating={Math.round(entry.rating)}></div>
+                        </div>
+                    </div>
+                )
+                }
+            </div>
+        </div>
+    )
+
+
 }
 
 export default App;
