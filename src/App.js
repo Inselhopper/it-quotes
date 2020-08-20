@@ -1,26 +1,13 @@
 import React from 'react';
 
+import { QuoteCards } from './components/quote-cards'
+
 
 function App({ quotes }) {
 
     return (
-        <div className="ui container">
-            <div className="ui cards">
-                {quotes.map((entry) =>
-                    <div key={entry.id} className="ui card">
-                        <div className="content">
-                            <div className="header">{entry.en}</div>
-                            <div className="description">
-                                <p>{entry.author}</p>
-                            </div>
-                        </div>
-                    </div>
-                )
-                }
-            </div>
-        </div>
+        <QuoteCards quotes={quotes}/>
     )
-
 
 }
 
