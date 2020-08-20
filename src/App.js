@@ -14,9 +14,6 @@ function App({ quotes }) {
                                 <p>{entry.author}</p>
                             </div>
                         </div>
-                        <div className="extra">
-                            Rating: <div className="ui star rating" data-rating={entry.rating?Math.round(entry.rating):""}></div>
-                        </div>
                     </div>
                 )
                 }

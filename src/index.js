@@ -2,11 +2,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-//jQuery
-import jQuery from "jquery";
-
-
-
 // Semeantic
 import "./css/semantic.min.css";
 
