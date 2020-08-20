@@ -2,6 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+//jQuery
+import jQuery from "jquery";
+
+
+
 // Semeantic
 import "./css/semantic.min.css";
 
@@ -9,7 +14,6 @@ import "./css/semantic.min.css";
 import App from './App';
 
 // Data
-//import { names } from "./data";
 import { quotes } from "./data/quotes";
 
 ReactDOM.render(
