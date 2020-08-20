@@ -1,10 +1,12 @@
 import React from 'react';
 
-export function QuoteCards( {quotes} ) {
+export function QuoteCards( {quotes, searchValue} ) {
+    //filterd Quotes Array
+    const filteredQuotes = quotes.filter(entry =>
+        entry.en.includes(searchValue))
     return (
-        <div className="ui container">
             <div className="ui cards">
-                {quotes.map((entry) =>
+                {filteredQuotes.map((entry) =>
                     <div key={entry.id} className="ui card">
                         <div className="content">
                             <div className="header">{entry.en}</div>
@@ -16,6 +18,5 @@ export function QuoteCards( {quotes} ) {
                 )
                 }
             </div>
-        </div>
     )
 }
